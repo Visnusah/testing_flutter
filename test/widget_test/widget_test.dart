@@ -57,15 +57,15 @@ testWidgets('Sub two numbers', (tester) async {
   );
 
   // Enter '5' into the first TextField found in the widget tree
-  await tester.enterText(find.byType(TextField).first, '5');
+  await tester.enterText(find.byType(TextField).at(0), '5');
 
   // Enter '3' into the last TextField found in the widget tree
-  await tester.enterText(find.byType(TextField).last, '3');
+  await tester.enterText(find.byType(TextField).at(1), '3');
 
   // Tap the 'Add' button to trigger the calculation logic
   // (Optional alternative: find button by index if text is not unique)
   // await tester.tap(find.byType(ElevatedButton).at(0));
-  await tester.tap(find.widgetWithText(ElevatedButton, 'Subtract'));
+  await tester.tap(find.byType(ElevatedButton).at(1));
 
   // Wait for all animations and scheduled tasks to complete
   await tester.pumpAndSettle();
