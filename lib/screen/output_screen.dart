@@ -16,7 +16,7 @@ class _ArithmeticOutputScreenState extends State<ArithmeticOutputScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Output')),
       body: Center(
-        child: Text('Result : $value', style: const TextStyle(fontSize: 25)),
+        child: Text('Results : $value', style: const TextStyle(fontSize: 25)),
       ),
     );
   }

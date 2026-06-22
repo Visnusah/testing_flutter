@@ -75,5 +75,20 @@ testWidgets('Sub two numbers', (tester) async {
 });
 });
 
+testWidgets('Add two numbers', (tester) async {
+  // check two UI in once 
+  // intrgration test 
+  await tester.pumpWidget(
+    const MaterialApp(
+      home: ArithemticScreen(),
+    )
+  );
+  await tester.enterText(find.byType(TextField).at(0), '5');
+  await tester.enterText(find.byType(TextField).at(1), '3');
+  await tester.tap(find.byType(ElevatedButton).at(0));
+
+  await tester.pumpAndSettle();
+  expect(find.text("Results : 8"), findsOneWidget);
+});
 
 }

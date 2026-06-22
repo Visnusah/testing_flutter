@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testing_flutter_apps/screen/output_screen.dart';
 import '../model/arithmetic.dart';
 
 class ArithemticScreen extends StatefulWidget {
@@ -19,12 +20,12 @@ class _MyAppState extends State<ArithemticScreen> {
       result = arithmetic!.add();
     });
     // Navigate to the output screen using the Navigator class
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(
-    //     builder: (context) => ArithmeticOutputScreen(result: result),
-    //   ),
-    // );
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ArithmeticOutputScreen(result: result),
+      ),
+    );
   }
 
   void _subtractNumbers() {
