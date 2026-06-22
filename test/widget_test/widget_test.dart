@@ -22,7 +22,7 @@ void main() {
 
 // Test case to verify the addition functionality of two numbers in the ArithmeticScreen
 
-group('add and sun widget test', (){
+group('add and sub widget test', (){
   testWidgets('add two numbers', (tester) async {
   // Build the ArithmeticScreen widget within a MaterialApp environment
   await tester.pumpWidget(
